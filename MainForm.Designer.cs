@@ -1,6 +1,6 @@
 ﻿namespace MinesweeperFinalProject
 {
-    partial class Form1
+    partial class frmMainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,21 +28,79 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.lblMainTitle = new System.Windows.Forms.Label();
+            this.btnNewGame = new System.Windows.Forms.Button();
+            this.btnContinueGame = new System.Windows.Forms.Button();
+            this.btnQuitApplication = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // Form1
+            // lblMainTitle
+            // 
+            this.lblMainTitle.AutoSize = true;
+            this.lblMainTitle.BackColor = System.Drawing.SystemColors.Control;
+            this.lblMainTitle.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblMainTitle.Location = new System.Drawing.Point(317, 84);
+            this.lblMainTitle.MaximumSize = new System.Drawing.Size(500, 500);
+            this.lblMainTitle.MinimumSize = new System.Drawing.Size(50, 50);
+            this.lblMainTitle.Name = "lblMainTitle";
+            this.lblMainTitle.Size = new System.Drawing.Size(103, 50);
+            this.lblMainTitle.TabIndex = 0;
+            this.lblMainTitle.Text = "Minesweeper";
+            this.lblMainTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnNewGame
+            // 
+            this.btnNewGame.Location = new System.Drawing.Point(321, 166);
+            this.btnNewGame.Name = "btnNewGame";
+            this.btnNewGame.Size = new System.Drawing.Size(99, 42);
+            this.btnNewGame.TabIndex = 1;
+            this.btnNewGame.Text = "New Game";
+            this.btnNewGame.UseVisualStyleBackColor = true;
+            this.btnNewGame.Click += new System.EventHandler(this.btnNewGame_Click);
+            // 
+            // btnContinueGame
+            // 
+            this.btnContinueGame.Location = new System.Drawing.Point(321, 214);
+            this.btnContinueGame.Name = "btnContinueGame";
+            this.btnContinueGame.Size = new System.Drawing.Size(99, 40);
+            this.btnContinueGame.TabIndex = 2;
+            this.btnContinueGame.Text = "Continue";
+            this.btnContinueGame.UseVisualStyleBackColor = true;
+            this.btnContinueGame.Click += new System.EventHandler(this.btnContinueGame_Click);
+            // 
+            // btnQuitApplication
+            // 
+            this.btnQuitApplication.Location = new System.Drawing.Point(321, 260);
+            this.btnQuitApplication.Name = "btnQuitApplication";
+            this.btnQuitApplication.Size = new System.Drawing.Size(99, 33);
+            this.btnQuitApplication.TabIndex = 3;
+            this.btnQuitApplication.Text = "Quit";
+            this.btnQuitApplication.UseVisualStyleBackColor = true;
+            this.btnQuitApplication.Click += new System.EventHandler(this.btnQuitApplication_Click);
+            // 
+            // frmMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(740, 464);
+            this.Controls.Add(this.btnQuitApplication);
+            this.Controls.Add(this.btnContinueGame);
+            this.Controls.Add(this.btnNewGame);
+            this.Controls.Add(this.lblMainTitle);
+            this.Name = "frmMainForm";
+            this.Text = "Minesweeper";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Label lblMainTitle;
+        private System.Windows.Forms.Button btnNewGame;
+        private System.Windows.Forms.Button btnContinueGame;
+        private System.Windows.Forms.Button btnQuitApplication;
     }
 }
 

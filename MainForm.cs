@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace MinesweeperFinalProject
 {
-    public partial class Form1 : Form
+    public partial class frmMainForm : Form
     {
-        public Form1()
+        public frmMainForm()
         {
             InitializeComponent();
         }
@@ -20,6 +20,33 @@ namespace MinesweeperFinalProject
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnNewGame_Click(object sender, EventArgs e)
+        {
+            frmNewGameForm newGameForm = new frmNewGameForm();
+
+            this.Hide();
+
+            newGameForm.ShowDialog();
+
+            this.Close();
+        }
+
+        private void btnQuitApplication_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnContinueGame_Click(object sender, EventArgs e)
+        {
+            frmGameForm gameForm = new frmGameForm();
+
+            this.Hide();
+
+            gameForm.ShowDialog();
+
+            this.Close();
         }
     }
 }
