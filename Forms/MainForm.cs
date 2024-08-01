@@ -12,9 +12,18 @@ namespace MinesweeperFinalProject
 {
     public partial class frmMainForm : Form
     {
+        private Game _currentGame;
+
         public frmMainForm()
         {
             InitializeComponent();
+        }
+
+        public frmMainForm(Game currentGame)
+        {
+            InitializeComponent();
+
+            _currentGame = currentGame;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -40,7 +49,7 @@ namespace MinesweeperFinalProject
 
         private void btnContinueGame_Click(object sender, EventArgs e)
         {
-            frmGameForm gameForm = new frmGameForm();
+            frmGameForm gameForm = new frmGameForm(_currentGame);
 
             this.Hide();
 

@@ -30,18 +30,18 @@
         {
             this.lblChoice1 = new System.Windows.Forms.Label();
             this.btnStartGame = new System.Windows.Forms.Button();
-            this.lblTitle = new System.Windows.Forms.Label();
             this.rbtnMediumGame = new System.Windows.Forms.RadioButton();
             this.rbtnLargeGame = new System.Windows.Forms.RadioButton();
             this.rbtnSmallGame = new System.Windows.Forms.RadioButton();
             this.gboxSizeChoices = new System.Windows.Forms.GroupBox();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.gboxSizeChoices.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblChoice1
             // 
             this.lblChoice1.AutoSize = true;
-            this.lblChoice1.Location = new System.Drawing.Point(329, 81);
+            this.lblChoice1.Location = new System.Drawing.Point(330, 76);
             this.lblChoice1.Name = "lblChoice1";
             this.lblChoice1.Size = new System.Drawing.Size(165, 20);
             this.lblChoice1.TabIndex = 0;
@@ -49,22 +49,13 @@
             // 
             // btnStartGame
             // 
-            this.btnStartGame.Location = new System.Drawing.Point(362, 275);
+            this.btnStartGame.Location = new System.Drawing.Point(348, 276);
             this.btnStartGame.Name = "btnStartGame";
-            this.btnStartGame.Size = new System.Drawing.Size(113, 57);
+            this.btnStartGame.Size = new System.Drawing.Size(127, 57);
             this.btnStartGame.TabIndex = 1;
             this.btnStartGame.Text = "Start";
             this.btnStartGame.UseVisualStyleBackColor = true;
             this.btnStartGame.Click += new System.EventHandler(this.btnStartGame_Click);
-            // 
-            // lblTitle
-            // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Location = new System.Drawing.Point(358, 33);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(103, 20);
-            this.lblTitle.TabIndex = 2;
-            this.lblTitle.Text = "Minesweeper";
             // 
             // rbtnMediumGame
             // 
@@ -76,6 +67,7 @@
             this.rbtnMediumGame.TabStop = true;
             this.rbtnMediumGame.Text = "Medium";
             this.rbtnMediumGame.UseVisualStyleBackColor = true;
+            this.rbtnMediumGame.CheckedChanged += new System.EventHandler(this.rbtnMediumGame_CheckedChanged);
             // 
             // rbtnLargeGame
             // 
@@ -87,6 +79,7 @@
             this.rbtnLargeGame.TabStop = true;
             this.rbtnLargeGame.Text = "Large";
             this.rbtnLargeGame.UseVisualStyleBackColor = true;
+            this.rbtnLargeGame.CheckedChanged += new System.EventHandler(this.rbtnLargeGame_CheckedChanged);
             // 
             // rbtnSmallGame
             // 
@@ -98,25 +91,35 @@
             this.rbtnSmallGame.TabStop = true;
             this.rbtnSmallGame.Text = "Small";
             this.rbtnSmallGame.UseVisualStyleBackColor = true;
+            this.rbtnSmallGame.CheckedChanged += new System.EventHandler(this.rbtnSmallGame_CheckedChanged);
             // 
             // gboxSizeChoices
             // 
             this.gboxSizeChoices.Controls.Add(this.rbtnSmallGame);
             this.gboxSizeChoices.Controls.Add(this.rbtnLargeGame);
             this.gboxSizeChoices.Controls.Add(this.rbtnMediumGame);
-            this.gboxSizeChoices.Location = new System.Drawing.Point(348, 115);
+            this.gboxSizeChoices.Location = new System.Drawing.Point(348, 121);
             this.gboxSizeChoices.Name = "gboxSizeChoices";
             this.gboxSizeChoices.Size = new System.Drawing.Size(127, 136);
             this.gboxSizeChoices.TabIndex = 7;
             this.gboxSizeChoices.TabStop = false;
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Location = new System.Drawing.Point(361, 36);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(103, 20);
+            this.lblTitle.TabIndex = 8;
+            this.lblTitle.Text = "Minesweeper";
             // 
             // frmNewGameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.gboxSizeChoices);
             this.Controls.Add(this.lblTitle);
+            this.Controls.Add(this.gboxSizeChoices);
             this.Controls.Add(this.btnStartGame);
             this.Controls.Add(this.lblChoice1);
             this.Name = "frmNewGameForm";
@@ -132,10 +135,10 @@
 
         private System.Windows.Forms.Label lblChoice1;
         private System.Windows.Forms.Button btnStartGame;
-        private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.RadioButton rbtnMediumGame;
         private System.Windows.Forms.RadioButton rbtnLargeGame;
         private System.Windows.Forms.RadioButton rbtnSmallGame;
         private System.Windows.Forms.GroupBox gboxSizeChoices;
+        private System.Windows.Forms.Label lblTitle;
     }
 }
