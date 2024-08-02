@@ -17,6 +17,25 @@ namespace MinesweeperFinalProject
         public frmMainForm()
         {
             InitializeComponent();
+
+            if (_currentGame != null)
+            {
+                int num;
+                if (_currentGame.TopScores.Count() < 10)
+                {
+                    num = _currentGame.TopScores.Count();
+                }
+                else
+                {
+                    num = 10;
+                }
+
+                for (int i = 0; i < num; i++)
+                {
+                    lboxTopScores.Items.Add(_currentGame.TopScores[i]);
+                }
+            }
+
         }
 
         public frmMainForm(Game currentGame)
@@ -24,6 +43,24 @@ namespace MinesweeperFinalProject
             InitializeComponent();
 
             _currentGame = currentGame;
+
+            if (currentGame != null)
+            {
+                int num;
+                if (_currentGame.TopScores.Count() < 10)
+                {
+                    num = _currentGame.TopScores.Count();
+                }
+                else
+                {
+                    num = 10;
+                }
+
+                for (int i = 0; i < num; i++)
+                {
+                    lboxTopScores.Items.Add(_currentGame.TopScores[i]);
+                }
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -49,13 +86,21 @@ namespace MinesweeperFinalProject
 
         private void btnContinueGame_Click(object sender, EventArgs e)
         {
-            frmGameForm gameForm = new frmGameForm(_currentGame);
+            if (_currentGame == null || _currentGame.IsGameOver)
+            {
+                MessageBox.Show("No Resumable Game Available");
+            }
+            else
+            {            
+                frmGameForm gameForm = new frmGameForm(_currentGame);
 
-            this.Hide();
+                this.Hide();
 
-            gameForm.ShowDialog();
+                gameForm.ShowDialog();
 
-            this.Close();
+                this.Close();
+            }
         }
+
     }
 }

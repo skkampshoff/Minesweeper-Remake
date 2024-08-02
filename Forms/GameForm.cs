@@ -16,6 +16,7 @@ namespace MinesweeperFinalProject
         private Button[,] _buttons;
         private DateTime _startTime;
         private Timer _gameTimer;
+        private TimeSpan _elapsed;
 
         public frmGameForm()
         {
@@ -44,12 +45,15 @@ namespace MinesweeperFinalProject
 
         private void UpdateTimer(object sender, EventArgs e)
         {
-            TimeSpan elapsed = DateTime.Now - _startTime;
-            txtTime.Text = elapsed.ToString(@"mm\:ss");
+            _elapsed = DateTime.Now - _startTime;
+            _elapsed += _currentGame.ElapsedTime;
+            txtTime.Text = _elapsed.ToString(@"mm\:ss");
         }
 
         private void btnPauseGame_Click(object sender, EventArgs e)
         {
+            _currentGame.ElapsedTime = _elapsed;
+
             frmMainForm mainForm = new frmMainForm(_currentGame);
 
             this.Hide();
@@ -118,6 +122,7 @@ namespace MinesweeperFinalProject
 
                 if (_currentGame.CurrentGrid.SquaresRevealed == (_currentGame.CurrentGrid.TotalSquares - _currentGame.CurrentGrid.NumberOfMines))
                 {
+                    _currentGame.CurrentGrid.RevealAllMines(_buttons);
                     _gameTimer.Stop();
                     MessageBox.Show("Congratulations! You Win!" + Environment.NewLine + $"Your Score: {_currentGame.CurrentScore}");
                 }

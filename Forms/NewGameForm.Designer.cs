@@ -35,7 +35,10 @@
             this.rbtnSmallGame = new System.Windows.Forms.RadioButton();
             this.gboxSizeChoices = new System.Windows.Forms.GroupBox();
             this.lblTitle = new System.Windows.Forms.Label();
+            this.tbarDifficultySlider = new System.Windows.Forms.TrackBar();
+            this.lblDifficultySlider = new System.Windows.Forms.Label();
             this.gboxSizeChoices.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbarDifficultySlider)).BeginInit();
             this.SuspendLayout();
             // 
             // lblChoice1
@@ -49,7 +52,7 @@
             // 
             // btnStartGame
             // 
-            this.btnStartGame.Location = new System.Drawing.Point(348, 276);
+            this.btnStartGame.Location = new System.Drawing.Point(348, 375);
             this.btnStartGame.Name = "btnStartGame";
             this.btnStartGame.Size = new System.Drawing.Size(127, 57);
             this.btnStartGame.TabIndex = 1;
@@ -98,7 +101,7 @@
             this.gboxSizeChoices.Controls.Add(this.rbtnSmallGame);
             this.gboxSizeChoices.Controls.Add(this.rbtnLargeGame);
             this.gboxSizeChoices.Controls.Add(this.rbtnMediumGame);
-            this.gboxSizeChoices.Location = new System.Drawing.Point(348, 121);
+            this.gboxSizeChoices.Location = new System.Drawing.Point(348, 99);
             this.gboxSizeChoices.Name = "gboxSizeChoices";
             this.gboxSizeChoices.Size = new System.Drawing.Size(127, 136);
             this.gboxSizeChoices.TabIndex = 7;
@@ -113,11 +116,33 @@
             this.lblTitle.TabIndex = 8;
             this.lblTitle.Text = "Minesweeper";
             // 
+            // tbarDifficultySlider
+            // 
+            this.tbarDifficultySlider.Location = new System.Drawing.Point(297, 300);
+            this.tbarDifficultySlider.Name = "tbarDifficultySlider";
+            this.tbarDifficultySlider.Size = new System.Drawing.Size(235, 69);
+            this.tbarDifficultySlider.TabIndex = 9;
+            this.tbarDifficultySlider.Minimum = 20;
+            this.tbarDifficultySlider.Maximum = 100;
+            this.tbarDifficultySlider.Value = 60;
+            this.tbarDifficultySlider.TickFrequency = 5;
+            // 
+            // lblDifficultySlider
+            // 
+            this.lblDifficultySlider.AutoSize = true;
+            this.lblDifficultySlider.Location = new System.Drawing.Point(283, 277);
+            this.lblDifficultySlider.Name = "lblDifficultySlider";
+            this.lblDifficultySlider.Size = new System.Drawing.Size(262, 20);
+            this.lblDifficultySlider.TabIndex = 10;
+            this.lblDifficultySlider.Text = "Choose Number of Mines (Difficulty)";
+            // 
             // frmNewGameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 491);
+            this.Controls.Add(this.lblDifficultySlider);
+            this.Controls.Add(this.tbarDifficultySlider);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.gboxSizeChoices);
             this.Controls.Add(this.btnStartGame);
@@ -126,6 +151,7 @@
             this.Text = "NewGameForm";
             this.gboxSizeChoices.ResumeLayout(false);
             this.gboxSizeChoices.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbarDifficultySlider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -140,5 +166,7 @@
         private System.Windows.Forms.RadioButton rbtnSmallGame;
         private System.Windows.Forms.GroupBox gboxSizeChoices;
         private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.TrackBar tbarDifficultySlider;
+        private System.Windows.Forms.Label lblDifficultySlider;
     }
 }

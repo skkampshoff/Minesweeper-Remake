@@ -9,16 +9,16 @@ namespace MinesweeperFinalProject
     public class SmallGrid : Grid
     {
         private static int _minMineCount = 10;
-        private static int _maxMineCount = 40;
+        private static int _maxMineCount = 20;
 
-        public int MinMineCount { get; }
-        public int MaxMineCount { get; }
+        public static int MinMineCount { get { return _minMineCount; } }
+        public static int MaxMineCount { get { return _maxMineCount; } }
 
-        public SmallGrid()
+        public SmallGrid(int numberOfMines)
         {
             _rows = 10;
             _columns = 10;
-            _numberOfMines = 10;
+            _numberOfMines = numberOfMines;
             IntializeGrid();
         }
     }

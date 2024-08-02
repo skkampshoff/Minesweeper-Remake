@@ -9,16 +9,16 @@ namespace MinesweeperFinalProject
     public class MediumGrid : Grid
     {
         private static int _minMineCount = 20;
-        private static int _maxMineCount = 100;
+        private static int _maxMineCount = 80;
 
-        public int MinMineCount { get; }
-        public int MaxMineCount { get; }
+        public static int MinMineCount { get { return _minMineCount; } }
+        public static int MaxMineCount { get { return _maxMineCount; } }
 
-        public MediumGrid()
+        public MediumGrid(int numberOfMines)
         {
             _rows = 20;
             _columns = 20;
-            _numberOfMines = 10;
+            _numberOfMines = numberOfMines;
             IntializeGrid();
         }
 

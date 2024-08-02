@@ -32,6 +32,8 @@
             this.btnNewGame = new System.Windows.Forms.Button();
             this.btnContinueGame = new System.Windows.Forms.Button();
             this.btnQuitApplication = new System.Windows.Forms.Button();
+            this.lboxTopScores = new System.Windows.Forms.ListBox();
+            this.lblTopScores = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblMainTitle
@@ -78,11 +80,31 @@
             this.btnQuitApplication.UseVisualStyleBackColor = true;
             this.btnQuitApplication.Click += new System.EventHandler(this.btnQuitApplication_Click);
             // 
+            // lboxTopScores
+            // 
+            this.lboxTopScores.FormattingEnabled = true;
+            this.lboxTopScores.ItemHeight = 20;
+            this.lboxTopScores.Location = new System.Drawing.Point(536, 149);
+            this.lboxTopScores.Name = "lboxTopScores";
+            this.lboxTopScores.Size = new System.Drawing.Size(120, 204);
+            this.lboxTopScores.TabIndex = 4;
+            // 
+            // lblTopScores
+            // 
+            this.lblTopScores.AutoSize = true;
+            this.lblTopScores.Location = new System.Drawing.Point(549, 114);
+            this.lblTopScores.Name = "lblTopScores";
+            this.lblTopScores.Size = new System.Drawing.Size(90, 20);
+            this.lblTopScores.TabIndex = 5;
+            this.lblTopScores.Text = "Top Scores";
+            // 
             // frmMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(740, 464);
+            this.Controls.Add(this.lblTopScores);
+            this.Controls.Add(this.lboxTopScores);
             this.Controls.Add(this.btnQuitApplication);
             this.Controls.Add(this.btnContinueGame);
             this.Controls.Add(this.btnNewGame);
@@ -101,6 +123,8 @@
         private System.Windows.Forms.Button btnNewGame;
         private System.Windows.Forms.Button btnContinueGame;
         private System.Windows.Forms.Button btnQuitApplication;
+        private System.Windows.Forms.ListBox lboxTopScores;
+        private System.Windows.Forms.Label lblTopScores;
     }
 }
 
