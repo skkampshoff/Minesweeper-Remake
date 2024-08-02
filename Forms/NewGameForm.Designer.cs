@@ -119,13 +119,13 @@
             // tbarDifficultySlider
             // 
             this.tbarDifficultySlider.Location = new System.Drawing.Point(297, 300);
+            this.tbarDifficultySlider.Maximum = 100;
+            this.tbarDifficultySlider.Minimum = 20;
             this.tbarDifficultySlider.Name = "tbarDifficultySlider";
             this.tbarDifficultySlider.Size = new System.Drawing.Size(235, 69);
             this.tbarDifficultySlider.TabIndex = 9;
-            this.tbarDifficultySlider.Minimum = 20;
-            this.tbarDifficultySlider.Maximum = 100;
-            this.tbarDifficultySlider.Value = 60;
             this.tbarDifficultySlider.TickFrequency = 5;
+            this.tbarDifficultySlider.Value = 60;
             // 
             // lblDifficultySlider
             // 
@@ -148,7 +148,7 @@
             this.Controls.Add(this.btnStartGame);
             this.Controls.Add(this.lblChoice1);
             this.Name = "frmNewGameForm";
-            this.Text = "NewGameForm";
+            this.Text = "Minesweeper";
             this.gboxSizeChoices.ResumeLayout(false);
             this.gboxSizeChoices.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbarDifficultySlider)).EndInit();

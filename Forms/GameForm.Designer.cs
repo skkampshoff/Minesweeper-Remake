@@ -96,7 +96,7 @@
             this.Controls.Add(this.txtScore);
             this.Controls.Add(this.lblScore);
             this.Name = "frmGameForm";
-            this.Text = "GameForm";
+            this.Text = "Minesweeper";
             this.ResumeLayout(false);
             this.PerformLayout();
 
