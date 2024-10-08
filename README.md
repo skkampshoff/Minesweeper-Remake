@@ -1,4 +1,4 @@
-# Minesweeper Game
+# Minesweeper Remake
 
 ## Overview
 This project is a remake of the classic Minesweeper game, built using C# and Windows Forms. The game features a grid of squares, some of which contain hidden mines. The player reveals squares and aims to avoid the mines while using logic to flag potential mine locations.
