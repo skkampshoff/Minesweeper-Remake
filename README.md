@@ -16,6 +16,12 @@ This project is a remake of the classic Minesweeper game, built using C# and Win
 - **Randomization**: Used for placing mines randomly on the grid.
 - **Event handling**: For managing user interactions, such as clicks and flagging squares.
 
+## What I Learned
+- Object-oriented programming principles like inheritance, encapsulation, and polymorphism.
+- Building user interfaces using Windows Forms.
+- Handling events and implementing game logic efficiently.
+- Working with version control using Git and GitHub.
+
 ## How to Run
 1. Clone this repository:  
    ```bash
